@@ -8,13 +8,30 @@ html {
     font-size: 62.5%;
 }
 
+body {
+  background-color: var(--body-c);
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 /* theme color */
 :root {
+    --body-c: #F5F8FF;
     --primary-c: #4E47FF;
+    --secondary-c: #4E47FF10;
     --dark-1: #252432;
     --dark-2: #25243250;
+    --dark-3: #1E1E1E;
+    --dark-4: #757575;
+    --dark-5: #B3B3B3;
+    --dark-6: #00000050;
+    --dark-7: #00000010;
+    --strock-c: #F2EDED;
+    --input-strock-c: #D6DDED;
     --placeholder-text-c: #00000050;
     --footer-text-c: #8987A1;
+    --hover-c: #4E47FF99;
 }
 /* fonts */
 .raleway-normal {
@@ -31,6 +48,362 @@ html {
   font-style: normal;
 }
 
+/* reusable styling code */
 .section-mb {
     margin-bottom: 11.6rem;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.primary-btn {
+    
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  padding: 12px 36px;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: var(--primary-c);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 1s;
+}
+
+/* apply hover effect on primary-btn */
+.primary-btn:hover {
+  background-image: linear-gradient(to right, #9403FD, #00ADFE);
+  transform: scale(1.05);
+}
+
+::placeholder {
+  color: var(--dark-6);
+}
+
+/* styling code for nav section */
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../Assets/Hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.logo {
+  font-size: 3.4rem;
+  text-decoration: none;
+  color: var(--primary-c);
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 0;
+}
+
+.hero-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 9rem;
+}
+
+.main-title-container {
+  width: 85%;
+  text-align: center;
+}
+
+.main-title-container h1 {
+  font-size: 6.5rem;
+  margin-bottom: 3.6rem;
+}
+
+
+/* styling code for Action section */
+.action-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 11.6rem;
+}
+
+.left-action-container {
+  width: 50%;
+}
+
+.left-action-container h2 {
+  font-size: 4.2rem;
+  margin-bottom: 2.3rem;
+}
+
+.left-action-container p {
+  font-size: 2.4rem;
+  color: var(--dark-2);
+  margin-bottom: 2.3rem;
+}
+
+.right-action-container img {
+  width: 40rem;
+  border-radius: 4.8rem;
+  -webkit-border-radius: 4.8rem;
+  -moz-border-radius: 4.8rem;
+  -ms-border-radius: 4.8rem;
+  -o-border-radius: 4.8rem;
+}
+
+/* styling code for user's overview section */
+.user-overview-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 11.6rem;
+  background-color: var(--secondary-c);
+  padding: 5rem 0;
+  border-radius: 2.4rem;
+  -webkit-border-radius: 2.4rem;
+  -moz-border-radius: 2.4rem;
+  -ms-border-radius: 2.4rem;
+  -o-border-radius: 2.4rem;
+}
+
+.overview-title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+.overview-container {
+  display: flex;
+  gap: 15.8rem;
+}
+
+.overview-div {
+  text-align: center;
+}
+
+.overview-div h2 {
+  font-size: 8rem;
+  color: var(--primary-c);
+}
+
+.overview-div p {
+  font-size: 2rem;
+  color: var(--dark-2);
+}
+
+/* styling code for user's feedback section */
+.users-feedback-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 11.6rem;
+}
+
+.feedback-title {
+  font-size: 4.2rem;
+  font-weight:  700;
+  margin-bottom: 5rem;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.feedback-star img {
+  width: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+.feedback-div {
+  border: .1rem solid var(--strock-c);
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  -moz-border-radius: 1.4rem;
+  -ms-border-radius: 1.4rem;
+  -o-border-radius: 1.4rem;
+  padding: 2.4rem;
+  background-color: #ffffff50;
+}
+
+.feedback-div h4 {
+  font-size: 2.4rem;
+  margin-bottom: .4rem;
+}
+
+.feedback-div p {
+  font-size: 1.6rem;
+  color: var(--dark-3);
+  margin-bottom: 1.4rem;
+}
+
+.user-profile {
+  display: flex;
+}
+
+.user-profile img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: .6rem;
+}
+
+.user-name h5 {
+  font-size: 1.6rem;
+  color: var(--dark-4);
+}
+
+.user-name p {
+  font-size: 1.6rem;
+  color: var(--dark-5);
+}
+
+/* styling code for trial section */
+.trial-section {
+  text-align: center;
+  padding: 7rem;
+  background-color: white;
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  -moz-border-radius: 1.4rem;
+  -ms-border-radius: 1.4rem;
+  -o-border-radius: 1.4rem;
+  margin-bottom: 11.6rem;
+}
+
+.trial-section h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.trial-section p {
+  font-size: 1.6rem;
+  color: var(--dark-6);
+  margin-bottom: 2rem;
+}
+
+.trial-btn {
+  margin-bottom: 2rem;
+}
+
+.trial-section img {
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  -moz-border-radius: 1.4rem;
+  -ms-border-radius: 1.4rem;
+  -o-border-radius: 1.4rem;
+  
+}
+
+.trial-container {
+  width: 50%;
+  background-color: red;
+}
+
+/* styling code for form section */
+.form-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7.1rem 0;
+
+}
+
+.left-side h2 {
+  font-size: 9.7rem;
+}
+
+.form {
+  width: 50%;
+}
+
+.form label {
+  font-size: 1.8rem;
+}
+
+.form input[type="email"], input[type="text"], textarea {
+  width: 100%;
+  padding: 2rem 3.2rem;
+  display: inline-block;
+  font-size: 2rem;
+  outline: none;
+  border: .1rem solid var(--input-strock-c);
+  color: var(--dark-6);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  margin-bottom: 1.9rem;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+/* start to adding CSS on footer section */
+.footer {
+  width: 100vw;
+  background-color: white;
+  border: .1rem solid var(--dark-7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-sec {
+  width: 40%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10.4rem 0;
+}
+
+.footer-logo {
+  font-size: 10rem;
+  margin-bottom: .8rem;
+}
+
+.footer-sec p {
+  font-size: 1.6rem;
+  color: var(--footer-text-c);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-nav ul {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.footer-nav ul li {
+  list-style: none;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--footer-text-c);
+}
+
+.footer-nav ul li:hover a {
+  color: var(--primary-c);
 }
