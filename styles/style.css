@@ -1,78 +1,36 @@
-*{
-    margin: auto;
+* {
+    margin: 0;
     padding: 0;
-    max-width: 1440px;
-}
-.header{
-    display: flex;
-    justify-content:space-between;
-    width: 1140px;
-    align-items: center;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 20px;
-}
-.header h2{
-    color: #4E47FF;
-    font-size: 34px;
-    font-weight: 900;
-}
-.header button{
-    display: flex;
-    height: 48px;
-    padding: 12px 36px;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 10px;
-    border: none;
-    background: #4E47FF;
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-}
-.header-container{
-    display: flex;
-    width: 1440px;
-    height: 698px;
-    padding-bottom: 200px;
-    flex-direction: column;
-    align-items: center;
-    gap: 158px;
-    flex-shrink: 0;
-    background: url('../images/Assets/banner.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-
+    box-sizing: border-box;
 }
 
-.banner-text{
-    color: #252432;
-    text-align: center;
-    font-size: 65px;
-    font-weight: 700;
-    align-self: stretch;
+html {
+    font-size: 62.5%;
 }
-.banner-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 905px;
-    gap: 37px;
 
-
+/* theme color */
+:root {
+    --primary-c: #4E47FF;
+    --dark-1: #252432;
+    --dark-2: #25243250;
+    --placeholder-text-c: #00000050;
+    --footer-text-c: #8987A1;
 }
-.banner-container button{
-    display: flex;
-    height: 48px;
-    padding: 12px 36px;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 10px;
-    background: #4E47FF;
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
+/* fonts */
+.raleway-normal {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.section-mb {
+    margin-bottom: 11.6rem;
 }
